@@ -139,7 +139,7 @@ namespace QueueNew
                     Console.WriteLine("Invalid entry");
                     break;
             }
-            Console.WriteLine("Do you want to go back to the menu?");
+            Console.WriteLine("Do you want to go back to the menu? y/n");
             string backToMenu = Console.ReadLine().ToLower();
             if (backToMenu.Contains("y"))
             {

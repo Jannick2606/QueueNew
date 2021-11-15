@@ -8,7 +8,7 @@ namespace QueueNew
     {
         static void Main(string[] args)
         {
-            string menuTitel = "  Menu\n";
+            string menuTitel = "Menu\n";
             string[] menuOptions = new string[] 
             {   "Add items", 
                 "Delete items", 

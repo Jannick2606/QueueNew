@@ -30,7 +30,7 @@ namespace QueueNew
             //Rewriting the lines by setting cursor position makes it look a lot smoother
             do
             {
-                Console.SetCursorPosition(0, 0);
+                Console.SetCursorPosition(2, 0);
                 DisplayMenu();
                 ConsoleKeyInfo keyInfo = Console.ReadKey(true);
                 key = keyInfo.Key;

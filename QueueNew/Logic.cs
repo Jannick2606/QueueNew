@@ -24,13 +24,19 @@ namespace QueueNew
         {
             return queue.Count();
         }
-        public int Max()
+        public string Max()
         {
-            return queue.Max();
+            if (queue.Count() == 0)
+                return "The queue is empty";
+            else
+                return $"The biggest number in the queue is {queue.Max()}";
         }
-        public int Min()
+        public string Min()
         {
-            return queue.Min();
+            if (queue.Count() == 0)
+                return "The queue is empty";
+            else
+                return $"The smallest number in the queue is {queue.Min()}";
         }
         public string Find(int value)
         {

@@ -116,8 +116,8 @@ namespace QueueNew
                     Console.WriteLine($"Number of items in queue: {l.Amount()}");
                     break;
                 case 3:
-                    Console.WriteLine($"The biggest number in the queue is: {l.Max()}");
-                    Console.WriteLine($"The smallest number in the queue is: {l.Min()}");
+                    Console.WriteLine(l.Max());
+                    Console.WriteLine(l.Min());
                     break;
                 case 4:
                     Console.WriteLine("What number are you looking for?");

@@ -26,7 +26,7 @@ namespace QueueNew
 
             //At the start of the loop I set the cursor potition to the top left corner
             //When it calls DisplayMenu it's gonna rewrite every line in the menu
-            //At first I used Console.Clear but it would make the menu disappear for a splitsecond and then reappear
+            //At first I used Console.Clear() but it would make the menu flicker when I pressed a key
             //Rewriting the lines by setting cursor position makes it look a lot smoother
             do
             {
@@ -107,10 +107,7 @@ namespace QueueNew
                 case 1:
                     Console.WriteLine("How many numbers do you want to delete?");
                     amount = int.Parse(Console.ReadLine());
-                        for (int i = 0; i < amount; i++)
-                        {
-                            l.Delete();
-                        }
+                    Console.WriteLine(l.Delete(amount));
                     break;
                 case 2:
                     Console.WriteLine($"Number of items in queue: {l.Amount()}");
@@ -151,6 +148,6 @@ namespace QueueNew
         private int index;
         private string[] options;
         private string menuTitle;
-        private Logic l = new Logic();
+        private readonly Logic l = new Logic();
     }
 }

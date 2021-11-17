@@ -16,9 +16,20 @@ namespace QueueNew
         {
             queue.Enqueue(value);
         }
-        public void Delete()
+        public string Delete(int amount)
         {
-            queue.Dequeue();
+            if (amount <= 0)
+                return "The amount of items you delete have to be greater than 0";
+            else if (amount > queue.Count())
+                return "Error: You're trying to delete numbers that aren't in the queue";
+            else
+            {
+                for (int i = 0; i < amount; i++)
+                {
+                    queue.Dequeue();
+                }
+                return "Items deleted";
+            }
         }
         public int Amount()
         {

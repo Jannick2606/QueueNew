@@ -23,7 +23,7 @@ namespace QueueNew
         {
             Console.CursorVisible = false;
             ConsoleKey key;
-
+            index = 0;
             //At the start of the loop I set the cursor potition to the top left corner
             //When it calls DisplayMenu it's gonna rewrite every line in the menu
             //At first I used Console.Clear() but it would make the menu flicker when I pressed a key
